@@ -1,3 +1,5 @@
+// legacy dev
+
 const fs = require('fs');
 const { PeerServer } = require('peer');
 
@@ -5,7 +7,7 @@ const { PeerServer } = require('peer');
  
 // app.use(cors())
  
-const PORT = 9001
+const PORT = 9000
 const PEERJSSERVERPATH = '/peerserver';
 
 const peerServer = PeerServer({ 
