@@ -3,7 +3,7 @@ import Peer from 'peerjs';
 
 import './chartclass.css'
 
-const PEERJSPORT = 9001;
+const PEERJSPORT = 9000;
 const PEERJSSERVERURL = '192.168.15.169';
 const PEERJSSERVERPATH = '/peerserver';
 
@@ -29,8 +29,9 @@ class ChatClass extends Component {
     componentDidMount() {
         this.peer = new Peer(undefined, {
             host: PEERJSSERVERURL,
-            port: PEERJSPORT,
             path: PEERJSSERVERPATH,
+            port: PEERJSPORT,
+            // secure: true,
             debug: 3
         });
 
@@ -122,13 +123,13 @@ class ChatClass extends Component {
                 </form>
             </div>
 
-            <div class="wrapper">
-                <div class="one">
+            <div className="wrapper">
+                <div className="one">
                     <div>
                         <video className="video" ref={this.localVideoref} autoPlay ></video>
                     </div>
                 </div>
-                <div class="two">
+                <div className="two">
                     <div>
                         <video className="video" ref={this.partnerVideoref} autoPlay></video>
                     </div>

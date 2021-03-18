@@ -1,3 +1,5 @@
+// legacy
+
 const fs = require('fs');
 const { PeerServer } = require('peer');
 

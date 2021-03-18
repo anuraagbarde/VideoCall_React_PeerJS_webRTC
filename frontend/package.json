@@ -18,7 +18,8 @@
     "__comment__": "https://github.com/mysticatea/npm-run-all/blob/master/docs/npm-run-all.md",
     "startpeerjsserver": "node ./peerServer.js",
     "startreactserver": "react-scripts start",
-    "start": "npm-run-all --parallel --race startpeerjsserver startreactserver",
+    "__combine__start": "npm-run-all --parallel --race startpeerjsserver startreactserver",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

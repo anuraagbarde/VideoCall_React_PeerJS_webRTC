@@ -2,12 +2,12 @@
 /.localCert/certClientLocal_192_168_15_169.pem
 /.localCert/keyClientLocal_192_168_15_169.pem
 
+# env
+/frontend/.env
+
 # Front end
 
 /frontend/node_modules/
 
 
 # Server
-
-#    peerserver
-/server/peerserver/node_modules/
