@@ -4,7 +4,7 @@ import Peer from 'peerjs';
 import './chartclass.css'
 
 const PEERJSPORT = 9001;
-const PEERJSSERVERURL = '192.168.15.169';
+const PEERJSSERVERURL = 'bardechat.herokuapp.com';
 const PEERJSSERVERPATH = '/peerserver';
 
 class ChatClass extends Component {
