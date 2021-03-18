@@ -79,14 +79,6 @@ class ChatClass extends Component {
         }
     }
 
-    activateVid = () => {
-        let constraints = {
-            video: true,
-            audio: true
-        };
-        this.getMediaLocal(constraints, this.partnerVideoref);
-    }
-
     handleChange(event) {
         this.setState({ newPeerId: event.target.value });
     }
