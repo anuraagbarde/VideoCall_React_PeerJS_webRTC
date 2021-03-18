@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import ChatClass from './components/chatclass';
 
 function App() {

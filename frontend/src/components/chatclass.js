@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Peer from 'peerjs';
 
+import './chartclass.css'
+
 const PEERJSPORT = 9001;
 const PEERJSSERVERURL = '192.168.15.169'
 
@@ -101,8 +103,8 @@ class ChatClass extends Component {
             console.log('receving partner stream')
             this.partnerVideoref.current.srcObject = partnerVideoStream;
         })
-        
-        
+
+
         call.on('close', () => {
             console.log('closing partner stream')
             this.partnerVideoref.current.srcObject = null;
@@ -113,16 +115,11 @@ class ChatClass extends Component {
     }
     render() {
         return (<div>
-            <div>
+            <div style={{margin: 20, textAlign: 'center'}} >
                 <p>Your id is {this.state.localPeerId}</p>
             </div>
-            henlo chat class
 
-            <div>
-                <video ref={this.localVideoref} autoPlay ></video>
-            </div>
-
-            <div>
+            <div style={{margin: 20, textAlign: 'center'}}>
                 <form onSubmit={(e) => this.handleSubmit(e)}>
                     <label>
                         New peer Id:
@@ -132,8 +129,17 @@ class ChatClass extends Component {
                 </form>
             </div>
 
-            <div>
-                <video ref={this.partnerVideoref} autoPlay></video>
+            <div class="wrapper">
+                <div class="one">
+                    <div>
+                        <video className="video" ref={this.localVideoref} autoPlay ></video>
+                    </div>
+                </div>
+                <div class="two">
+                    <div>
+                        <video className="video" ref={this.partnerVideoref} autoPlay></video>
+                    </div>
+                </div>
             </div>
 
         </div>);
