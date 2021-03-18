@@ -11,4 +11,5 @@ mkcert is for local development server https
 Once you have your certificates configured (It is better to have https environment because navigator.mediaDevices.getUserMedia(constraints) requires a secure environment though it works fine on localhost)
 
 - cd /frontend/  then yarn  then  yarn start
-- cd /server/peerserver  then  node ./peerserver.js
+
+The peer-server and react-server is run in parallel using npm-run-all, config can be changed in package.json scripts
