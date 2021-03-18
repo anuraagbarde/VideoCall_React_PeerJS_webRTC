@@ -3,7 +3,7 @@ import Peer from 'peerjs';
 
 import './chartclass.css'
 
-const PEERJSPORT = 9000;
+// const PEERJSPORT = 9000;
 const PEERJSSERVERURL = 'bardepeerjs.herokuapp.com';
 const PEERJSSERVERPATH = '/peerserver';
 
@@ -29,9 +29,10 @@ class ChatClass extends Component {
     componentDidMount() {
         this.peer = new Peer(undefined, {
             host: PEERJSSERVERURL,
-            port: PEERJSPORT,
+            // port: PEERJSPORT,
             path: PEERJSSERVERPATH,
-            debug: 3
+            debug: 3,
+            secure: true
         });
 
         this.peer.on('open', (id) => {
