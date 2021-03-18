@@ -1,9 +1,8 @@
-// import './App.css';
 import ChatClass from './components/chatclass';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <ChatClass/>
     </div>
   );
