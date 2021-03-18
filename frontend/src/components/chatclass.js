@@ -4,7 +4,8 @@ import Peer from 'peerjs';
 import './chartclass.css'
 
 const PEERJSPORT = 9001;
-const PEERJSSERVERURL = '192.168.15.169'
+const PEERJSSERVERURL = '192.168.15.169';
+const PEERJSSERVERPATH = '/peerserver';
 
 class ChatClass extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class ChatClass extends Component {
         this.peer = new Peer(undefined, {
             host: PEERJSSERVERURL,
             port: PEERJSPORT,
-            path: '/',
+            path: PEERJSSERVERPATH,
             debug: 3
         });
 
