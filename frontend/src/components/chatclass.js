@@ -122,13 +122,13 @@ class ChatClass extends Component {
                 </form>
             </div>
 
-            <div class="wrapper">
-                <div class="one">
+            <div className="wrapper">
+                <div className="one">
                     <div>
                         <video className="video" ref={this.localVideoref} autoPlay ></video>
                     </div>
                 </div>
-                <div class="two">
+                <div className="two">
                     <div>
                         <video className="video" ref={this.partnerVideoref} autoPlay></video>
                     </div>
