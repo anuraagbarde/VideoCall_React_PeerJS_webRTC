@@ -1,4 +1,4 @@
-## To run the project you need the followning
+## To run the project you need the following
  - npx create-react-app
  - choco mkcert (then mkcert -install) read the .localCert readme
  - peerjs and peerjs server
