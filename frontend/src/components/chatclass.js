@@ -61,6 +61,10 @@ class ChatClass extends Component {
                 console.log('reciving call videostream from initiator...');
                 this.partnerVideoref.current.srcObject = partnerVideoStream;
             })
+            call.on('close', () => {
+                console.log('closing partner stream')
+                this.partnerVideoref.current.srcObject = '';
+            })
         });
     }
 
