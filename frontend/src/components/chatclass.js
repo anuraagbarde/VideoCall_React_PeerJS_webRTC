@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Peer from 'peerjs';
-
 import './chartclass.css'
+
+const stunserverlist = require('./stunserverlist').stunserverlist;
+
 
 // const PEERJSPORT = 9000;
 const PEERJSSERVERURL = 'bardepeerjs.herokuapp.com';
@@ -32,7 +34,9 @@ class ChatClass extends Component {
             // port: PEERJSPORT,
             path: PEERJSSERVERPATH,
             debug: 3,
-            secure: true
+            secure: true,
+            config: {'iceServers': stunserverlist}
+            // https://gist.github.com/anuraagbarde/39e10ca5e5a3567a45163ea21421ff8d
         });
 
         this.peer.on('open', (id) => {
